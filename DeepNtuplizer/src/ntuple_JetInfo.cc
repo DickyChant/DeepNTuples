@@ -116,7 +116,7 @@ void ntuple_JetInfo::initBranches(TTree* tree){
     addBranch(tree,"jet_puId", &jet_puId_); 
 
     // quark gluon
-    addBranch(tree,"jet_qgl",   &jet_qgl_);  // qg tagger from jmar
+    // addBranch(tree,"jet_qgl",   &jet_qgl_);  // qg tagger from jmar
     addBranch(tree,"QG_ptD",   &QG_ptD_);   // momentum fraction per jet constituent
     addBranch(tree,"QG_axis2", &QG_axis2_); // jet shape i.e. gluon are wider than quarks
     addBranch(tree,"QG_mult",  &QG_mult_);  // multiplicity i.e. total num of PFcands reconstructed
@@ -680,7 +680,7 @@ bool ntuple_JetInfo::fillBranches(const pat::Jet & jet, const size_t& jetidx, co
 
     const auto jetRef = reco::CandidatePtr(coll->ptrs().at( jetidx));
 
-    jet_qgl_ = (*qglHandle)[jetRef];
+    // jet_qgl_ = (*qglHandle)[jetRef];
     QG_ptD_ = (*ptDHandle)[jetRef];
     QG_axis2_ = (*axis2Handle)[jetRef];
     QG_mult_ = (*multHandle)[jetRef];

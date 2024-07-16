@@ -199,7 +199,7 @@ void ntuple_SV::initBranches(TTree* tree){
     addBranch(tree,(prefix_+"sv_pfd2dsig").c_str()     ,&sv_pfd2dsig_     ,(prefix_+"sv_pfd2dsig_["+prefix_+"sv_num_]/F").c_str());
     addBranch(tree,(prefix_+"sv_pfd3dval").c_str()     ,&sv_pfd3dval_     ,(prefix_+"sv_pfd3dval_["+prefix_+"sv_num_]/F").c_str());
     addBranch(tree,(prefix_+"sv_pfd3dsig").c_str()     ,&sv_pfd3dsig_     ,(prefix_+"sv_pfd3dsig_["+prefix_+"sv_num_]/F").c_str());
-    addBranch(tree,(prefix_+"sv_puppiw").c_str()     ,&sv_puppiw_     ,(prefix_+"sv_puppiw_["+prefix_+"sv_num_]/F").c_str());
+    // addBranch(tree,(prefix_+"sv_puppiw").c_str()     ,&sv_puppiw_     ,(prefix_+"sv_puppiw_["+prefix_+"sv_num_]/F").c_str());
     addBranch(tree,(prefix_+"sv_charge_sum").c_str()     ,&sv_charge_sum_     ,(prefix_+"sv_charge_sum_["+prefix_+"sv_num_]/F").c_str());
 
 }
@@ -291,7 +291,7 @@ bool ntuple_SV::fillBranches(const pat::Jet & jet, const size_t& jetidx, const  
 
 	    float calo_frac = 0.0;
 	    float hcal_frac = 0.0;
-	    float puppiw = 0.0;
+	    // float puppiw = 0.0;
 	    float charge = 0.0;
 	    float dz = 0.0;
 
@@ -306,7 +306,7 @@ bool ntuple_SV::fillBranches(const pat::Jet & jet, const size_t& jetidx, const  
 
 	      calo_frac = calo_frac + PackedCandidate_->caloFraction();
 	      hcal_frac = hcal_frac + PackedCandidate_->hcalFraction();
-	      puppiw = puppiw + PackedCandidate_->puppiWeight();
+	      // puppiw = puppiw + PackedCandidate_->puppiWeight();
 	      charge = charge + PackedCandidate_->charge();
 	      dz = dz + PackedCandidate_->dz();
 	      if(PackedCandidate_->charge() != 0 and PackedCandidate_->pt() > 0.95){
@@ -321,7 +321,7 @@ bool ntuple_SV::fillBranches(const pat::Jet & jet, const size_t& jetidx, const  
 
 	    sv_calo_frac_[sv_num_]          = calo_frac / sv.numberOfDaughters();
 	    sv_hcal_frac_[sv_num_]          = hcal_frac / sv.numberOfDaughters();
-	    sv_puppiw_[sv_num_]             = puppiw / sv.numberOfDaughters();
+	    // sv_puppiw_[sv_num_]             = puppiw / sv.numberOfDaughters();
 	    sv_dz_[sv_num_]                 = dz / sv.numberOfDaughters();
 	    sv_charge_sum_[sv_num_]         = charge;
 

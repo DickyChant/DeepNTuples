@@ -60,7 +60,7 @@ class ntuple_LT: public ntuple_content{
   float  LT_phi_[max_ltcand_];
   float  LT_e_[max_ltcand_];
 
-  float  LT_puppiw_[max_ltcand_];
+  // float  LT_puppiw_[max_ltcand_];
   float  LT_VTX_ass_[max_ltcand_];
   float  LT_dz_[max_ltcand_];
 

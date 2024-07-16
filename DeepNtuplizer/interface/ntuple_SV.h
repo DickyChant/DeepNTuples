@@ -79,7 +79,7 @@ private:
     float sv_pfd2dsig_[max_sv];
     float sv_pfd3dval_[max_sv];
     float sv_pfd3dsig_[max_sv];
-    float sv_puppiw_[max_sv];
+    // float sv_puppiw_[max_sv];
     float sv_charge_sum_[max_sv];
 
     static const reco::Vertex * spvp_;

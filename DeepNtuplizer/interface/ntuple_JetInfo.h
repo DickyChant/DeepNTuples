@@ -282,7 +282,7 @@ public:
     int jet_phflav_;
 
     // quark/gluon
-    float jet_qgl_;
+    // float jet_qgl_;
     float QG_ptD_;
     float QG_axis2_;
     float QG_mult_;

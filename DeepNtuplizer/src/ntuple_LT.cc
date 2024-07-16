@@ -173,7 +173,7 @@ void ntuple_LT::initBranches(TTree* tree){
   addBranch(tree,"LT_phi", &LT_phi_,"LT_phi_[n_LTcand_]/F");
   addBranch(tree,"LT_e", &LT_e_,"LT_e_[n_LTcand_]/F");
 
-  addBranch(tree,"LT_puppiw",&LT_puppiw_,"LT_puppiw_[n_LTcand_]/F");
+  // addBranch(tree,"LT_puppiw",&LT_puppiw_,"LT_puppiw_[n_LTcand_]/F");
   addBranch(tree,"LT_dz",&LT_dz_,"LT_dz_[n_LTcand_]/F");
 
   addBranch(tree,"LT_drminsv",&LT_drminsv_,"LT_drminsv_[n_LTcand_]/F");
@@ -303,7 +303,7 @@ bool ntuple_LT::fillBranches(const pat::Jet & jet, const size_t& jetidx, const  
 	LT_phi_[fillntupleentry] = PackedCandidate_->phi();
 	LT_e_[fillntupleentry] = PackedCandidate_->energy();
 
-	LT_puppiw_[fillntupleentry] = PackedCandidate_->puppiWeight();
+	// LT_puppiw_[fillntupleentry] = PackedCandidate_->puppiWeight();
 	LT_dz_[fillntupleentry] = PackedCandidate_->dz();
 	LT_VTX_ass_[fillntupleentry] = PackedCandidate_->pvAssociationQuality();
 

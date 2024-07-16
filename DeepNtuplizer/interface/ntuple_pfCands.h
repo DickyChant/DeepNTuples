@@ -64,7 +64,7 @@ private:
     float  Cpfcan_phirel_[max_pfcand_];
     float  Cpfcan_etarel_[max_pfcand_];
     float  Cpfcan_deltaR_[max_pfcand_];
-    float  Cpfcan_puppiw_[max_pfcand_];
+    // float  Cpfcan_puppiw_[max_pfcand_];
     float  Cpfcan_VTX_ass_[max_pfcand_];
     float  Cpfcan_firsthit_[max_pfcand_];
 
@@ -139,7 +139,7 @@ private:
     float  Npfcan_ptrel_[max_pfcand_];
     float  Npfcan_e_[max_pfcand_];
     float  Npfcan_erel_[max_pfcand_];
-    float  Npfcan_puppiw_[max_pfcand_];
+    // float  Npfcan_puppiw_[max_pfcand_];
     float  Npfcan_phirel_[max_pfcand_];
     float  Npfcan_etarel_[max_pfcand_];
     float  Npfcan_deltaR_[max_pfcand_];
